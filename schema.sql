@@ -1,0 +1,15 @@
+CREATE DATABASE envelope_budget;
+
+USE envelope_budget;
+
+CREATE TABLE income (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    amount DECIMAL(10, 2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE envelopes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    balance DECIMAL(10,2) DEFAULT 0
+);
